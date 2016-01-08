@@ -132,7 +132,7 @@ module.exports = function(robot) {
       var output = '';
       var day;
       _.each(messages, function (days, username) {
-        output += 'Updates for '+username+' on '+currentDay+':\n';
+        output += '*Updates for '+username+' on '+currentDay+':*\n';
         day = currentDay in days ? days[currentDay] : [];
         if(day.length > 0){
           output += renderMessages(day);
